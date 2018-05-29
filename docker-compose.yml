@@ -1,0 +1,21 @@
+# Copied from: https://blog.blindside.io/developing-a-ruby-on-rails-app-with-docker-compose-d75b20334634
+version: '2.0'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: puma
+    ports:
+      - 3000:3000
+      - 9292:9292
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres@db
+      RAILS_ENV: development
+      EXECJS_RUNTIME: Node
+  db:
+    image: postgres:10.3-alpine

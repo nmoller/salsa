@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.2'
 
+gem 'execjs'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
@@ -32,7 +34,7 @@ group :production do
   gem 'puma'
 
   # newrelic for monitoring
-  gem 'newrelic_rpm'
+  #gem 'newrelic_rpm'
 end
 
 # preprocessors
@@ -71,7 +73,7 @@ gem 'jbuilder'
 gem 'uber-s3'
 
 # instructure canvas api
-gem 'canvas-api', '0.7'
+gem 'canvas-api'#, '0.7'
 
 gem 'nokogiri'
 

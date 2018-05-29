@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: salsa_development
-  host: db
+  host: <%= ENV['DATABASE_URL'] %>
   username: postgres
   password:
   pool: 5
