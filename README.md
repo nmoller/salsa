@@ -157,6 +157,13 @@ Copy `config/config.yml.default` paste to `config/config.yml`, change as necessa
     bundle install
     bundle exec rake db:create db:migrate
 
+To initilise the db:
+    `rake db:seed`
+
+So far the localhost is running in [http://localhost:9292](http://localhost:9292)
+
+Puma is branched directly. Should we use passenger or nginx? For dev, it is fine.
+
 To run the server, from the project root type:
 
     rails server
